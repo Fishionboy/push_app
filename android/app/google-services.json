@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "250295517587",
+    "project_id": "pushapp-30cc1",
+    "storage_bucket": "pushapp-30cc1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250295517587:android:3a18f11221e98f1e6de866",
+        "android_client_info": {
+          "package_name": "com.javiprieto.push_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkZgLbJs_6ORYteTf3PbqyamGjljb9wIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
