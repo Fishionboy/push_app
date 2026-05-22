@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:push_app/config/router/app_router.dart';
@@ -7,6 +8,7 @@ import 'config/theme/app_theme.dart';
 void main() async{
 
   WidgetsFlutterBinding.ensureInitialized();
+  FirebaseMessaging.onBackgroundMessage(firebaseMesagingBackgroundHandler);
   await NotificationsBloc.initializeFCM();
 
   runApp(
@@ -23,6 +25,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp.router(
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
