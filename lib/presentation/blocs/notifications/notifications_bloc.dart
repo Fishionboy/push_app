@@ -23,8 +23,6 @@ class NotificationsBloc extends Bloc<NotificationsEvent, NotificationsState> {
     on<NotificationsStatusChanged>(_notificationStatusChanged);
     on<NotificationReceived>(_onPushMessageReceived);
 
-    //TODO 3: Crear el listener # _onPushMessageReceived
-
     //Verificar estado de las notificaciones
     _initialStatusCheck();
     //Listener para notificaciones en foreground
@@ -103,5 +101,13 @@ class NotificationsBloc extends Bloc<NotificationsEvent, NotificationsState> {
 );
 
 add(NotificationsStatusChanged(settings.authorizationStatus));
+  }
+
+  PushMessage? getMessageById(String pushMessageId){
+    final exist = state.notifications.any((element) => element.messageId == pushMessageId);
+
+    if (!exist) return null;
+
+    return state.notifications.firstWhere((element)=> element.messageId == pushMessageId);
   }
 }
