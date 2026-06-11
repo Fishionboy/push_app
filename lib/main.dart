@@ -8,7 +8,7 @@ import 'config/theme/app_theme.dart';
 void main() async{
 
   WidgetsFlutterBinding.ensureInitialized();
-  FirebaseMessaging.onBackgroundMessage(firebaseMesagingBackgroundHandler);
+  FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
   await NotificationsBloc.initializeFCM();
 
   runApp(
